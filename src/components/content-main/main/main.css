@@ -1,0 +1,44 @@
+.content-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.p {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.green {
+    color: #49B95B;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.blue {
+    color: #4A7FB0;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.addNew {
+    font-weight: 500;
+    color: #324A5E;
+    font-size: 24px;
+    margin-bottom: 80px;
+}
+
+.ad-new {
+    text-decoration: none;
+    color: #324A5E;
+}
+
+.ad-new:hover {
+    color: #378FC9;
+}
+

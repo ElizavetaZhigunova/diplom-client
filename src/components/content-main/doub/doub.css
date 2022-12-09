@@ -1,0 +1,50 @@
+.doub-content {
+    display: flex;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.dwrapper {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.dtext {
+    font-size: 20px;
+    font-weight: 300;
+    color: #5B5B5B;
+}
+
+.second {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.second, .third {
+    padding-top: 10px;
+}
+
+.dcont {
+    margin-bottom: 40px;
+}
+
+.f {
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+.act {
+    padding: 30px;
+}
+
+.act:hover {
+    border-radius: 15px;
+    border: 0.5px solid black;
+    transition: 0.3s linear;
+}

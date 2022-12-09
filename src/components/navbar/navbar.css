@@ -1,0 +1,77 @@
+.navbar__container {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    padding-bottom: 10px;
+}
+
+.logo {
+    margin-left: 70px;
+    width: 8%;
+}
+
+.content__left {
+    padding-top: 155px;
+}
+
+.header {
+    font-family: 'Zen Dots', cursive;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-right: 100px;
+}
+
+.btn-rent, .btn-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 4em;
+    background: #373434;
+    border-radius: 15px;
+    color: white;  
+    font-weight: 700;
+}
+
+.btn-rent {
+    margin-left: 100px;
+}
+
+.btn-rent:hover, .btn-login:hover {
+    background: rgb(81, 81, 81);
+}
+
+.loga {
+    text-decoration: none;
+    color: rgb(18, 18, 18);
+}
+
+.loga:active {
+    color: rgb(18, 18, 18);
+}
+
+.loga:hover {
+    color:#ff2f2f;
+}
+
+
+.A:active {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.A:hover {
+    color: rgb(195, 193, 193);
+}
+
+.A {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.btn-login {
+    margin-left: 190px;
+}
