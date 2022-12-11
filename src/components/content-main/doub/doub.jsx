@@ -8,7 +8,7 @@ const MiddleContent = () => {
     return (
         <div className='doub-content'>
             <div className="dwrapper">
-                <div className='first act'>
+                <div className='first acti'>
                     <img className='dcont f' src={First} alt="" />
                     <h3>Удобно</h3>
                     <p className='dtext'>Огромный выбор среди тысяч<br/>
@@ -16,7 +16,7 @@ const MiddleContent = () => {
                     с вами</p>
                 </div>
 
-                <div className='second act'>
+                <div className='second acti'>
                     <img className='dcont' src={Second} alt="" />
                     <h3>Безопасно</h3>
                     <p className='dtext'>Защищенные безналичные<br/>
@@ -24,7 +24,7 @@ const MiddleContent = () => {
                         участниками площадки</p>
                 </div>
 
-                <div className='third act'>
+                <div className='third acti'>
                     <img className='dcont' src={Third} alt="" />
                     <h3>Легко</h3>
                     <p className='dtext'>Быстрая доставка под запрос <br/> 

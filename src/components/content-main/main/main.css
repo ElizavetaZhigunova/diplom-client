@@ -31,6 +31,7 @@
     color: #324A5E;
     font-size: 24px;
     margin-bottom: 80px;
+    display: flex;
 }
 
 .ad-new {

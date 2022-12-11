@@ -1,0 +1,57 @@
+.tab1-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab1-cont1.left {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 135px;
+}
+
+.tab1-cont1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 135px;
+}
+
+.tab {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 100px;
+}
+
+
+.tab.left {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 100px;
+    margin-left: 0;
+}
+
+.tab1-header {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.09em;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.tab1-text {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #6A6A6A;
+}
