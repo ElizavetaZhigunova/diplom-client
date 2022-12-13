@@ -1,0 +1,77 @@
+.registration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registration__header {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #43436D;
+    display: flex;
+    width: 100%;
+    margin-bottom: 80px;
+    justify-content: space-around;
+}
+
+.form-reg {
+    background: #FFFFFF;
+    border-radius: 15px;
+    width: 947px;
+    display: flex;
+    padding: 70px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Al {
+    text-decoration: none;
+    color: #404040;
+}
+
+.link {
+    height: 36px;
+}
+
+.link.active {
+    text-decoration: none;
+    color: #43436D;
+    border-bottom: 2px solid #43436D;
+}
+
+.registration__btn {
+    width: 747px;
+height: 75px;
+
+background: #43436D;
+border-radius: 15px;
+
+font-weight: 500;
+font-size: 36px;
+line-height: 20px;
+/* identical to box height, or 56% */
+
+letter-spacing: 0.05em;
+
+color: #FFFFFF;
+}
+
+.reg-title {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 25px;
+    /* identical to box height */
+    margin-top: 10px;
+
+    color: #969899;
+}
+
+.blue-span {
+    color: #378FC9;
+}
+

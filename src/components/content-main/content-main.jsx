@@ -1,3 +1,4 @@
+import Footer from '../footer/footer';
 import React from 'react';
 import "../content-main/content-main.css";
 
@@ -11,6 +12,7 @@ const ContentMain = () => {
             <ContMain />
             <MiddleContent />
             <Third />
+            <Footer />
         </div>
     );
 };
