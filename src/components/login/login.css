@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.registration__header {
+#tabs {
     font-family: 'Raleway';
     font-weight: 400;
     font-size: 40px;
@@ -15,9 +15,10 @@
     width: 100%;
     margin-bottom: 80px;
     justify-content: space-around;
+    cursor: pointer;
 }
 
-.form-reg {
+.tabs-block-wrapper {
     background: #FFFFFF;
     border-radius: 15px;
     width: 947px;
@@ -34,11 +35,11 @@
     color: #404040;
 }
 
-.link {
+.tab-btn {
     height: 36px;
 }
 
-.link.active {
+.tab-btn.active {
     text-decoration: none;
     color: #43436D;
     border-bottom: 2px solid #43436D;
@@ -73,5 +74,27 @@ color: #FFFFFF;
 
 .blue-span {
     color: #378FC9;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+#content-dop {
+    max-width: 330px;
+    width: 100%;
+    height: 180px;
+}
+
+.content-dop {
+    display: none;
+}
+
+.content-dop.active {
+    display: block;
 }
 

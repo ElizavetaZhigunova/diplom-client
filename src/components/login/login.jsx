@@ -1,28 +1,32 @@
 import React from 'react';
 import "../login/login.css";
-import Input from '../Inputs/Input';
+import Login from './children/Login';
 import Footer from '../footer/footer';
-import { NavLink } from 'react-router-dom';
-
+import Reg from './children/Reg';
+import "../login/children/function.js";
 
 const Loginn = () => {
     return (
-        <div className='registration'>
-            <div className="form-reg">
-                <div className="registration__header">
-                    <NavLink className="Al"  to="/"><div className='link active'>Регистрация</div></NavLink>
-                    <NavLink className="Al"  to="/"><div className='link'>Авторизация</div></NavLink>
+        <div className="registration">
+            <div className="tabs-block-wrapper">
+            <div id="tabs">
+                <div className="tab-btn active" data-btn="1">Регистрация</div>
+                <div className="tab-btn" data-btn="2">Авторизация</div>
+            </div>
+            <div id="contents">
+                <div className="content active" data-content="1">
+                    <Login/>
                 </div>
-                <Input type="text" placeholder="Введите имя"/>
-                <Input type="text" placeholder="Введите фамилию"/>
-                <Input type="text" placeholder="Введите email"/>
-                <Input type="password" placeholder="Введите пароль"/>
-                <button type='button' className="registration__btn">Зарегистрироваться</button>
-               <span className='reg-title' >Создавая аккаунт, Вы соглашаетесь с нашей <span className='blue-span'> политикой конфиденциальности</span></span>
+                <div className="content" data-content="2">
+                    <Reg/>
+                </div>
+            </div>
             </div>
             <Footer/>
         </div>
+        
     );
 };
 
 export default Loginn;
+
