@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Reg from '../components/login/children/Reg';
-import Login from '../components/login/children/Login';
+import Reg from '../login/children/Reg';
+import Login from '../login/children/Login';
 import './tabs.css';
 
 const Tabs = () => {

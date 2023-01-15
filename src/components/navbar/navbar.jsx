@@ -3,7 +3,7 @@ import "../navbar/navbar.css";
 import Logo from '../img/logo1.svg';
 import Search from '../search-panel/search-panel';
 import { NavLink } from 'react-router-dom';
-import ModalWindow from '../../modal-window/modal-window';
+import ModalWindow from '../modal-window/modal-window';
 
 
 const Navbar = () => {
