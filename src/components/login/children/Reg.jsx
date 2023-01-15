@@ -1,5 +1,6 @@
 import React from 'react';
 import Input from '../../Inputs/Input';
+import './login.css';
 
 const Reg = () => {
     return (

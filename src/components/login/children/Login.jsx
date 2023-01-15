@@ -1,5 +1,6 @@
 import React from 'react';
 import Input from '../../Inputs/Input';
+import './login.css';
 
 
 const Login = () => {
@@ -11,7 +12,7 @@ const Login = () => {
                 <Input type="text" placeholder="Введите email"/>
                 <Input type="password" placeholder="Введите пароль"/>
                 <button type='button' className="registration__btn">Зарегистрироваться</button>
-               <br /><span className='reg-title' >Создавая аккаунт, Вы соглашаетесь с нашей <span className='blue-span'> политикой конфиденциальности</span></span>
+               <br /><span className='reg-title' >Создавая аккаунт, Вы соглашаетесь <br /> с нашей <span className='blue-span'> политикой конфиденциальности</span></span>
             </div>
         </div>
     );

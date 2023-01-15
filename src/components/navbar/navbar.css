@@ -43,6 +43,7 @@ height: auto;
     border-radius: 15px;
     color: white;  
     font-weight: 700;
+    cursor: pointer;
 }
 
 .btn-rent {
