@@ -20,11 +20,14 @@
 }
 
 .modal__content {
+    display: flex;
+    align-items: center;
     padding: 20px;
     border-radius: 12px;
     background-color: white;
     transform: scale(0.5);
     transition: 0.4s all;
+    height: 600px;
 
 }
 
