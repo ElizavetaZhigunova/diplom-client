@@ -29,7 +29,6 @@
 }
 
 .ant-tabs-nav::before {
-    position: absolute;
     right: 0;
     left: 0;
     border-bottom: none;
@@ -60,7 +59,6 @@
 }
 
 :where(.css-dev-only-do-not-override-1i536d8).ant-tabs-top >.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-1i536d8).ant-tabs-bottom >.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-1i536d8).ant-tabs-top >div>.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-1i536d8).ant-tabs-bottom >div>.ant-tabs-nav::before {
-    position: absolute;
     right: 0;
     left: 0;
     border-bottom:none;

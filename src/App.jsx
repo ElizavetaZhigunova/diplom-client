@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/navbar/navbar';
 // import ContentMain from './components/content-main/content-main';
 import Home from './components/Pages/Home';
-
+import AddNew from "./components/AddNewad/AddNew";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
               <Route path="Logo" element={"/"}/>
               <Route path="/" element={<Home/>}/>
               <Route path="Search" element={"/"}/>
-              <Route path='AddNew' element={ "/" } />
+              <Route path='AddNew' element={ <AddNew /> } />
             </Routes>
         </div>
       </div>

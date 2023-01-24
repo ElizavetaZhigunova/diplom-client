@@ -9,7 +9,7 @@ const MiddleContent = () => {
         <div className='doub-content'>
             <div className="dwrapper">
                 <div className='first acti'>
-                    <img className='dcont f' src={First} alt="" />
+                    <img className='dcont' src={First} alt="" />
                     <h3>Удобно</h3>
                     <p className='dtext'>Огромный выбор среди тысяч<br/>
                     предложений от физлиц рядом<br/>

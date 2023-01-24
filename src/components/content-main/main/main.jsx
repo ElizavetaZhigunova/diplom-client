@@ -18,7 +18,7 @@ const ContMain = () => {
                         </p>
                     </div>
                     <Search className="sear"/>
-                    <NavLink className='ad-new' to="/"><p className='addNew'>+ Создать объявление</p></NavLink>
+                    <NavLink className='ad-new' to="AddNew"><p className='addNew'>+ Создать объявление</p></NavLink>
                 </div>
                 <div className='content__right'><img src={Main} alt="" /></div> 
             </div>

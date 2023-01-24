@@ -5,21 +5,17 @@ height: auto;
 }
 
 .navbar__container {
-    padding-top: 10px;
     display: flex;
     align-items: center;
-    height: auto;
     background: #FFFFFF;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-    padding-bottom: 10px;
-    justify-content: center;
+    box-shadow: 0px 4px 15px rgb(0 0 0 / 25%);
+    justify-content: space-around;
     width: 100%;
+    flex-direction: row;
 }
 
 .logo {
-
-    width: 230px;
-    margin-right: 89px;
+    width: 155px;
 }
 
 .content__left {
@@ -38,16 +34,12 @@ height: auto;
     align-items: center;
     justify-content: center;
     width: 10em;
-    height: 4em;
+    height: 45px;
     background: #373434;
     border-radius: 15px;
     color: white;  
     font-weight: 700;
     cursor: pointer;
-}
-
-.btn-rent {
-    margin-left: 100px;
 }
 
 .btn-rent:hover, .btn-login:hover {
@@ -82,9 +74,6 @@ height: auto;
     color: aliceblue;
 }
 
-.btn-login {
-    margin-left: 190px;
-}
 
 text {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

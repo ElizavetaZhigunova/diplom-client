@@ -8,7 +8,7 @@ import ModalWindow from '../modal-window/modal-window';
 
 const Navbar = () => {
 
-    const [modalActive, setModalActive] = useState(true);
+    const [modalActive, setModalActive] = useState(false);
 
     return (
         <div className='navbar'>
@@ -16,7 +16,7 @@ const Navbar = () => {
             <NavLink className='loga' to="/"><img src={Logo} alt="" className='logo'/></NavLink>
                 {/* <div className="header"><NavLink className='loga' to="/">Fashion<br />for rent</NavLink></div> */}
                 <Search/>
-                <NavLink className='A' to="/"><div className="btn-rent">Сдать в аренду</div></NavLink>
+                <NavLink className='A' to="AddNew"><div className="btn-rent">Сдать в аренду</div></NavLink>
                 <div className="btn-login" onClick={() => setModalActive(true)} >Войти</div>
                 <ModalWindow active={modalActive} setActive={setModalActive} />
             </div>
