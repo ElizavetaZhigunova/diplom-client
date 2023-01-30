@@ -6,7 +6,7 @@ const Third = () => {
 
     return (
         <div className='third__content'>
-            <h1>Как это работает?</h1>
+            <h1 className='third__title'>Как это работает?</h1>
             <div className="tab-container">
                 <MainTabs/>
             </div>

@@ -1,0 +1,75 @@
+.container__tabs {
+    display: flex;
+    flex-direction: column;
+    word-break: break-all;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 20px;
+    /* identical to box height, or 50% */
+
+    letter-spacing: 0.1em;
+    align-items: center;
+    
+  }
+  
+  .tabs-block {
+    background: #DFDEDE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    height: 50px;
+    padding: 10px;
+    
+  }
+
+  .tabss {
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: content-box;
+    position: relative;
+    outline: none;
+    transition: 0.5s;
+    margin-right: 10px;
+  }
+
+  
+  .active-tabss  {
+    background: #fff;
+    border-radius: 25px;
+  }
+  
+  .active-tabss::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 5px;
+
+  }
+  
+  
+  
+  button {
+    border: none;
+    
+  }
+  .content-tabss {
+    flex-grow : 1;
+    
+  }
+  .contents {
+    padding: 20px;
+    display: none;
+  }
+  
+  .contents.active-contentss {
+    display: block;
+  }

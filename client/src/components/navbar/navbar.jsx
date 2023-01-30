@@ -4,9 +4,13 @@ import Logo from '../img/logo1.svg';
 import Search from '../search-panel/search-panel';
 import { NavLink } from 'react-router-dom';
 import ModalWindow from '../modal-window/modal-window';
-
+import {useDispatch, useSelector } from 'react-redux';
+import { logout } from '../../reducers/userReducer';
 
 const Navbar = () => {
+
+    const isAuth = useSelector(state => state.user.isAuth)
+    const dispatch = useDispatch()
 
     const [modalActive, setModalActive] = useState(false);
 
@@ -17,7 +21,10 @@ const Navbar = () => {
                 {/* <div className="header"><NavLink className='loga' to="/">Fashion<br />for rent</NavLink></div> */}
                 <Search/>
                 <NavLink className='A' to="AddNew"><div className="btn-rent">Сдать в аренду</div></NavLink>
-                <div className="btn-login" onClick={() => setModalActive(true)} >Войти</div>
+                {!isAuth &&
+                    <div className="btn-login" onClick={() => setModalActive(true)} >Войти</div>
+                }
+                {isAuth && <div className="btn-login" onClick={() => dispatch(logout())} >Выход</div>}
                 <ModalWindow active={modalActive} setActive={setModalActive} />
             </div>
         </div>

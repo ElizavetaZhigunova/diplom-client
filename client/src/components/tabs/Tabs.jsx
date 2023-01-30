@@ -3,6 +3,7 @@ import Reg from '../login/children/Reg';
 import Login from '../login/children/Login';
 import './tabs.css';
 
+
 const Tabs = () => {
 
     const [toggleState, setToggleState] = useState(1);
