@@ -9,12 +9,13 @@ const Reg = () => {
     const [password, setPassword] = useState("")
     const dispatch = useDispatch()
 
+
     return (
         <div className='registration'>
             <div className="form-reg">
                 <Input value={email} setValue={setEmail} type="text" placeholder="Введите email"/>
                 <Input value={password} setValue={setPassword} type="password" placeholder="Введите пароль"/>
-                <button type='button' className="registration__btn" onClick = {() => dispatch(login(email, password))} >Войти</button>
+                <button type='button' className="registration__btn" onClick = {() => dispatch(login(email, password))}>Войти</button>
             </div>
         </div>
     );

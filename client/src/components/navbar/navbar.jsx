@@ -6,12 +6,19 @@ import { NavLink } from 'react-router-dom';
 import ModalWindow from '../modal-window/modal-window';
 import {useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../reducers/userReducer';
+import { useEffect } from 'react';
+import { auth } from '../../actions/user';
 
 const Navbar = () => {
 
     const isAuth = useSelector(state => state.user.isAuth)
     const dispatch = useDispatch()
 
+    useEffect(() => {
+        if (localStorage.getItem('token')) {
+            dispatch(auth())
+          }
+    }, [])
     const [modalActive, setModalActive] = useState(false);
 
     return (
@@ -24,8 +31,8 @@ const Navbar = () => {
                 {!isAuth &&
                     <div className="btn-login" onClick={() => setModalActive(true)} >Войти</div>
                 }
-                {isAuth && <div className="btn-login" onClick={() => dispatch(logout())} >Выход</div>}
-                <ModalWindow active={modalActive} setActive={setModalActive} />
+                {isAuth && <div className="btn-login" onClick={() => dispatch(logout())}>Выход</div>}
+                <ModalWindow active={modalActive} setActive={setModalActive}  />
             </div>
         </div>
     );
