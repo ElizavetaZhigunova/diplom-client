@@ -77,7 +77,7 @@ const Footer = () => {
             </div>
             <div className='footer-copyr'>
                 <div className="company">
-                Copyright © 2022 Fashion for rent. Все права защищены
+                Copyright © 2022-2023 Fashion for rent. Все права защищены
                 </div>
                 <div className="ofert">
                 Используя сайт, вы принимаете правила оферты

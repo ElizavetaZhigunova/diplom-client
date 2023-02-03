@@ -5,11 +5,11 @@ import Tabs from '../tabs/Tabs';
 import './modal-window.css';
 
 
-const ModalWindow = ({active, setActive, children}) => {
+const ModalWindow = ({active, setActive, children, closeModalWindow}) => {
     return (
         <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
             <div className={active ? "modal__content active" : "modal__content"} onClick={e => e.stopPropagation()} >
-               <Tabs/>
+               <Tabs closeModalWindow={closeModalWindow}/>
             </div>
         </div>
     );

@@ -12,6 +12,7 @@ height: auto;
     justify-content: space-around;
     width: 100%;
     flex-direction: row;
+    height: 80px;
 }
 
 .logo {
@@ -38,7 +39,8 @@ height: auto;
     background: #373434;
     border-radius: 15px;
     color: white;  
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 17px;
     cursor: pointer;
 }
 

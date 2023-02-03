@@ -4,11 +4,12 @@ import './login.css';
 import { registration } from '../../../actions/user';
 
 
-const Login = () => {
+const Login = ({closeModalWindow}) => {
     const [name, setName] = useState("")
     const [lastname, setLastname] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    
     return (
         <div className='registration'>
             <div className="form-reg">

@@ -4,7 +4,7 @@ import Login from '../login/children/Login';
 import './tabs.css';
 
 
-const Tabs = () => {
+const Tabs = ({closeModalWindow}) => {
 
     const [toggleState, setToggleState] = useState(1);
 
@@ -23,8 +23,8 @@ const Tabs = () => {
             </div>
 
             <div className="content-tabs">
-                <div className={toggleState === 1 ? "content active-contents" : "content"}><Reg/> </div>
-                <div className={toggleState === 2 ? "content active-contents" : "content"}><Login/> </div>
+                <div className={toggleState === 1 ? "content active-contents" : "content"}><Reg closeModalWindow={closeModalWindow} /> </div>
+                <div className={toggleState === 2 ? "content active-contents" : "content"}><Login closeModalWindow={closeModalWindow} /> </div>
             </div> 
 
         </div>

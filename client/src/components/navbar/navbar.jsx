@@ -21,6 +21,10 @@ const Navbar = () => {
     }, [])
     const [modalActive, setModalActive] = useState(false);
 
+    const closeModalWindow = () => {
+        setModalActive(false)
+    }
+
     return (
         <div className='navbar'>
             <div className="navbar__container">
@@ -31,8 +35,8 @@ const Navbar = () => {
                 {!isAuth &&
                     <div className="btn-login" onClick={() => setModalActive(true)} >Войти</div>
                 }
-                {isAuth && <div className="btn-login" onClick={() => dispatch(logout())}>Выход</div>}
-                <ModalWindow active={modalActive} setActive={setModalActive}  />
+                {isAuth && <div className="btn-login" onClick={() => dispatch(logout())}>Выйти</div>}
+                <ModalWindow active={modalActive} setActive={setModalActive} closeModalWindow={closeModalWindow} />
             </div>
         </div>
     );

@@ -28,16 +28,16 @@
 }
 
 .footer-title.main {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 300;
     text-align: left;
-    line-height: 35px;
+    line-height: 22px;
     height: 100%;
     margin-top: 7px;
 }
 
 .footer-content {
-    margin-top: 80px;
+    margin-top: 30px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
@@ -45,7 +45,7 @@
 
 .footer-title {
     font-weight: 700;
-font-size: 25px;
+font-size: 20px;
 line-height: 20px;
 /* identical to box height, or 80% */
 
@@ -61,7 +61,7 @@ color: #242424;
 .footer-item {
     margin-top: 30px;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 20px;
     /* identical to box height, or 100% */
 
@@ -79,8 +79,8 @@ color: #242424;
     display: flex;
     justify-content: space-between;
     font-weight: 200;
-font-size: 20px;
-line-height: 23px;
+    font-size: 20px;
+    line-height: 23px;
 
-color: #252525;
+    color: #252525;
 }

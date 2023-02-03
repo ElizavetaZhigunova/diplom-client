@@ -1,0 +1,13 @@
+.wrapper-nauth {
+    height: 100%;
+}
+.container-nauth {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 240px;
+}
+
+.header-nauth {
+    font-size: 30px;
+}
