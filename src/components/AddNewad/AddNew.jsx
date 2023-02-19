@@ -7,7 +7,7 @@ import {useSelector } from 'react-redux';
 import Footer from '../footer/footer';
 
 
-
+/*Лиза гимно*/
 
 const AddNew = () => {
     const isAuth = useSelector(state => state.user.isAuth)
