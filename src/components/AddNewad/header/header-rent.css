@@ -32,6 +32,12 @@
     background: #000;
 }
 
+.img-header.active *{
+    width: 50%;
+    stroke: white;
+}
+
 .img-header {
     width: 50%;
+    stroke: black;
 }

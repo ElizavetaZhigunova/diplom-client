@@ -11,6 +11,8 @@ import { auth } from '../../actions/user';
 
 const Navbar = () => {
 
+    
+
     const isAuth = useSelector(state => state.user.isAuth)
     const dispatch = useDispatch()
 
@@ -19,6 +21,7 @@ const Navbar = () => {
             dispatch(auth())
           }
     }, [])
+    console.log(localStorage.getItem('token'))
     const [modalActive, setModalActive] = useState(false);
 
     const closeModalWindow = () => {
@@ -29,7 +32,6 @@ const Navbar = () => {
         <div className='navbar'>
             <div className="navbar__container">
             <NavLink className='loga' to="/"><img src={Logo} alt="" className='logo'/></NavLink>
-                {/* <div className="header"><NavLink className='loga' to="/">Fashion<br />for rent</NavLink></div> */}
                 <Search/>
                 <NavLink className='A' to="AddNew"><div className="btn-rent">Сдать в аренду</div></NavLink>
                 {!isAuth &&

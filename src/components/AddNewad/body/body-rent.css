@@ -1,8 +1,12 @@
-.container-rent {
+.container-rent.active {
     display: flex;
     flex-direction: column;
     width: 80%;
     margin-bottom: 20px;
+}
+
+.container-rent{
+    display: none;
 }
 
 .wrapper-rent {
