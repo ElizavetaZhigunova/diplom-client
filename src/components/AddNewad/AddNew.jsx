@@ -19,13 +19,16 @@ const AddNew = () => {
     return (
         <div className='AddNew'>
             <div className="addNew-wrapper">
-              <Tabbs>
 
-              
-                {isAuth && <BodyRent/>}
-                {!isAuth && <NotAuthorized/> }
-               <Footer/>
-              </Tabbs>
+              {isAuth && 
+                <BodyRent/>
+              }
+
+              {!isAuth &&  
+                <NotAuthorized/>
+              }
+
+              <Footer/>
                 
                 
             </div>

@@ -10,7 +10,6 @@ const Reg = ({closeModalWindow}) => {
     
     const dispatch = useDispatch()
 
-    console.log(closeModalWindow)
     return (
         <div className='registration'>
             <div className="form-reg">

@@ -13,20 +13,22 @@ const Navbar = () => {
 
     
 
-    const isAuth = useSelector(state => state.user.isAuth)
+    const isAuth = useState(!!localStorage.getItem('token'))
     const dispatch = useDispatch()
 
     useEffect(() => {
         if (localStorage.getItem('token')) {
-            dispatch(auth())
+            console.log("IsAuth", isAuth)
           }
+
     }, [])
-    console.log(localStorage.getItem('token'))
+    
     const [modalActive, setModalActive] = useState(false);
 
     const closeModalWindow = () => {
         setModalActive(false)
     }
+
 
     return (
         <div className='navbar'>
@@ -34,10 +36,11 @@ const Navbar = () => {
             <NavLink className='loga' to="/"><img src={Logo} alt="" className='logo'/></NavLink>
                 <Search/>
                 <NavLink className='A' to="AddNew"><div className="btn-rent">Сдать в аренду</div></NavLink>
-                {!isAuth &&
-                    <div className="btn-login" onClick={() => setModalActive(true)} >Войти</div>
-                }
+
+                {!isAuth && <div className="btn-login" onClick={() => setModalActive(true)} >Войти</div>}
+
                 {isAuth && <div className="btn-login" onClick={() => dispatch(logout())}>Выйти</div>}
+
                 <ModalWindow active={modalActive} setActive={setModalActive} closeModalWindow={closeModalWindow} />
             </div>
         </div>
