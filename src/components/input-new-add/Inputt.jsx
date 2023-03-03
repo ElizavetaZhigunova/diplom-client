@@ -8,7 +8,8 @@ const Inputt = (props) => {
                 value={props.value} 
                 type={props.type} 
                 placeholder={props.placeholder} 
-                className="inputt"/>
+                className="inputt"
+                id={props.id}/>
         </div>
     );
 };

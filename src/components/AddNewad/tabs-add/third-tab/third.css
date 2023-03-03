@@ -1,0 +1,63 @@
+.container-price{
+    display: flex;
+}
+#inp-body-third {
+  background: #FFFFFF;
+  border: 1px solid #656161;
+  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+
+  width: 150px;
+  height: 56px;
+
+
+  margin-right: 20px;
+}
+
+.wrapper-inp {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    margin-bottom: 20px;
+}
+
+.name-body-rent {
+  margin-bottom: 15px;
+}
+
+.name-inp-ad {
+  margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+      clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.checkbox {
+  display: inline-block; 
+  height: 20px;
+  width: 20px;
+  margin-right: 4px;
+
+  background: #F1F1F1;
+  border: 1px solid #43436D;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.input-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label {
+  margin-left: 10px;
+}

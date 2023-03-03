@@ -1,0 +1,12 @@
+.describe {
+    color: #797979;
+    font-size: 15px;
+    font-weight: 200;
+    text-align: left;
+    margin-top: 15px;
+}
+
+#inp-body {
+    background: url('../../../img/Group5.svg') no-repeat;
+    background-position: right 20px center;
+}

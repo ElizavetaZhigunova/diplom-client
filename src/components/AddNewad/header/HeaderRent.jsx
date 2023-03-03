@@ -6,13 +6,13 @@ import {ReactComponent as Img1} from '../../img/addNew/tasksquare.svg';
 import {ReactComponent as Img2}from '../../img/addNew/location.svg';
 import {ReactComponent as Img3} from '../../img/addNew/arrowcircledown.svg';
 import Eli from '../../img/addNew/Ellipse.svg';
-import { useState } from 'react';
+
 
 const HeaderRent = ({toggleState}) => {
 
     return (
 
-        
+        <div className="wrapper-header-rent">
             <div className="header-new">
 
 
@@ -37,7 +37,7 @@ const HeaderRent = ({toggleState}) => {
                 <div className={toggleState === 4 ? "img-new active" : "img-new "}><Img3 className={toggleState === 4 ? "img-header active" : "img-header "} /></div>
 
             </div> 
-
+</div>
     );
 };
 
