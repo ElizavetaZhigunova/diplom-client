@@ -4,6 +4,10 @@ import Navbar from './components/navbar/navbar';
 // import ContentMain from './components/content-main/content-main';
 import Home from './components/Pages/Home';
 import AddNew from "./components/AddNewad/AddNew";
+import { AllAds } from './components/Pages/AllAds';
+import { FullAd } from './components/Pages/FullAd';
+
+
 
 function App() {
   return (
@@ -16,6 +20,8 @@ function App() {
               <Route path="/" element={<Home/>}/>
               <Route path="Search" element={"/"}/>
               <Route path='AddNew' element={ <AddNew /> } />
+              <Route path='AddNew/AllAds' element={<AllAds />} />
+              <Route path='addNew/:id' element={<FullAd />} />
             </Routes>
         </div>
       </div>

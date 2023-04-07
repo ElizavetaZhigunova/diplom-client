@@ -1,38 +1,30 @@
 import React from 'react';
-import "../AddNewad/AddNew.css";
-import BodyRent from './body/BodyRent';
-import HeaderRent from './header/HeaderRent';
+import "./style.css";
+import BodyRent from './BodyRent';
 import NotAuthorized from './dont-sign/not-authorized';
 import {useSelector } from 'react-redux';
 import Footer from '../footer/footer';
-import Tabbs from './Tabbs';
-
-
 
 /*Лиза гимно*/
 
 const AddNew = () => {
-    const isAuth = useSelector(state => state.user.isAuth)
+  const isAuth = useSelector(state => state.user.isAuth)
 
+  return (
+    <div className='AddNew'>
+      <div className="addNew-wrapper">
 
+        {isAuth && 
+          <BodyRent/>
+        }
 
-    return (
-        <div className='AddNew'>
-            <div className="addNew-wrapper">
+        {!isAuth &&  
+          <NotAuthorized/>
+        }
 
-              {isAuth && 
-                <BodyRent/>
-              }
-
-              {!isAuth &&  
-                <NotAuthorized/>
-              }
-
-              <Footer/>
-                
-                
-            </div>
-        </div> 
+        <Footer/>         
+      </div>
+    </div> 
     );
 };
 

@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 /** As `React.useEffect` but pass origin value in callback and not need care deps length change. */
 export default function useEffect(callback, deps) {
   var prevRef = React.useRef(deps);

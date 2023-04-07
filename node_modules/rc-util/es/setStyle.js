@@ -13,6 +13,7 @@ function setStyle(style) {
     element = _options$element === void 0 ? document.body : _options$element;
   var oldStyle = {};
   var styleKeys = Object.keys(style);
+
   // IE browser compatible
   styleKeys.forEach(function (key) {
     oldStyle[key] = element.style[key];

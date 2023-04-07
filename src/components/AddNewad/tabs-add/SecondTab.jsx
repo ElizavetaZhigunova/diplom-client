@@ -1,20 +1,22 @@
 import React from 'react';
-import Inputt from '../../../input-new-add/Inputt';
-import "../second-tab/second-tab.css"
+import Inputt from '../../input-new-add/Inputt';
+import "../style.css"
 
-const SecondTab = () => {
+const SecondTab = ({data, setData}) => {
     return (
         <div>
-            <div className="header-body-rent">Шаг 2</div>
-
                 <div className="wrapper-rent">
     
                     <div className="left-side">
         
                         <div className="name-body-rent">Выберите категорию</div>
-                        <Inputt id="inp-body" placeholder="Категория" />
+                        <input id="inp-body" placeholder="Категория" 
+                            onChange={(e) => setData({...data, category: e.target.value})}
+                            value={data.category}/>
                         <div className='photo-body-rent'>Укажите стоимость</div>
-                        <Inputt placeholder="Стоимость товара" />
+                        <input placeholder="Стоимость товара" 
+                            onChange={(e) => setData({...data, price: e.target.value})}
+                            value={data.price}/>
                         <p className='describe'>Пожалуйста, установите точную цену - вы будете застрахованы только до <br />
                             указанного значения, если что-то пойдет не так.
                         </p>

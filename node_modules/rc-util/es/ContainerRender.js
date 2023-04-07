@@ -1,7 +1,9 @@
 import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
 import _createClass from "@babel/runtime/helpers/esm/createClass";
+import _assertThisInitialized from "@babel/runtime/helpers/esm/assertThisInitialized";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import _createSuper from "@babel/runtime/helpers/esm/createSuper";
+import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -19,14 +21,14 @@ var ContainerRender = /*#__PURE__*/function (_React$Component) {
       args[_key] = arguments[_key];
     }
     _this = _super.call.apply(_super, [this].concat(args));
-    _this.removeContainer = function () {
+    _defineProperty(_assertThisInitialized(_this), "removeContainer", function () {
       if (_this.container) {
         ReactDOM.unmountComponentAtNode(_this.container);
         _this.container.parentNode.removeChild(_this.container);
         _this.container = null;
       }
-    };
-    _this.renderComponent = function (props, ready) {
+    });
+    _defineProperty(_assertThisInitialized(_this), "renderComponent", function (props, ready) {
       var _this$props = _this.props,
         visible = _this$props.visible,
         getComponent = _this$props.getComponent,
@@ -43,7 +45,7 @@ var ContainerRender = /*#__PURE__*/function (_React$Component) {
           }
         });
       }
-    };
+    });
     return _this;
   }
   _createClass(ContainerRender, [{
@@ -78,9 +80,9 @@ var ContainerRender = /*#__PURE__*/function (_React$Component) {
   }]);
   return ContainerRender;
 }(React.Component);
-ContainerRender.defaultProps = {
+_defineProperty(ContainerRender, "defaultProps", {
   autoMount: true,
   autoDestroy: true,
   forceRender: false
-};
+});
 export { ContainerRender as default };

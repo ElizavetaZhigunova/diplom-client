@@ -9,6 +9,7 @@ exports.default = void 0;
  * some key-codes definition and utils from closure-library
  * @author yiminghe@gmail.com
  */
+
 var KeyCode = {
   /**
    * MAC_ENTER
@@ -26,6 +27,7 @@ var KeyCode = {
    * NUMLOCK on FF/Safari Mac
    */
   NUM_CENTER: 12,
+  // NUMLOCK on FF/Safari Mac
   /**
    * ENTER
    */
@@ -62,34 +64,42 @@ var KeyCode = {
    * PAGE_UP
    */
   PAGE_UP: 33,
+  // also NUM_NORTH_EAST
   /**
    * PAGE_DOWN
    */
   PAGE_DOWN: 34,
+  // also NUM_SOUTH_EAST
   /**
    * END
    */
   END: 35,
+  // also NUM_SOUTH_WEST
   /**
    * HOME
    */
   HOME: 36,
+  // also NUM_NORTH_WEST
   /**
    * LEFT
    */
   LEFT: 37,
+  // also NUM_WEST
   /**
    * UP
    */
   UP: 38,
+  // also NUM_NORTH
   /**
    * RIGHT
    */
   RIGHT: 39,
+  // also NUM_EAST
   /**
    * DOWN
    */
   DOWN: 40,
+  // also NUM_SOUTH
   /**
    * PRINT_SCREEN
    */
@@ -98,10 +108,12 @@ var KeyCode = {
    * INSERT
    */
   INSERT: 45,
+  // also NUM_INSERT
   /**
    * DELETE
    */
   DELETE: 46,
+  // also NUM_DELETE
   /**
    * ZERO
    */
@@ -146,6 +158,7 @@ var KeyCode = {
    * QUESTION_MARK
    */
   QUESTION_MARK: 63,
+  // needs localization
   /**
    * A
    */
@@ -254,6 +267,7 @@ var KeyCode = {
    * META
    */
   META: 91,
+  // WIN_KEY_LEFT
   /**
    * WIN_KEY_RIGHT
    */
@@ -378,46 +392,57 @@ var KeyCode = {
    * SEMICOLON
    */
   SEMICOLON: 186,
+  // needs localization
   /**
    * DASH
    */
   DASH: 189,
+  // needs localization
   /**
    * EQUALS
    */
   EQUALS: 187,
+  // needs localization
   /**
    * COMMA
    */
   COMMA: 188,
+  // needs localization
   /**
    * PERIOD
    */
   PERIOD: 190,
+  // needs localization
   /**
    * SLASH
    */
   SLASH: 191,
+  // needs localization
   /**
    * APOSTROPHE
    */
   APOSTROPHE: 192,
+  // needs localization
   /**
    * SINGLE_QUOTE
    */
   SINGLE_QUOTE: 222,
+  // needs localization
   /**
    * OPEN_SQUARE_BRACKET
    */
   OPEN_SQUARE_BRACKET: 219,
+  // needs localization
   /**
    * BACKSLASH
    */
   BACKSLASH: 220,
+  // needs localization
   /**
    * CLOSE_SQUARE_BRACKET
    */
   CLOSE_SQUARE_BRACKET: 221,
+  // needs localization
   /**
    * WIN_KEY
    */
@@ -426,6 +451,7 @@ var KeyCode = {
    * MAC_FF_META
    */
   MAC_FF_META: 224,
+  // Firefox (Gecko) fires this for the meta key instead of 91
   /**
    * WIN_IME
    */
@@ -441,6 +467,7 @@ var KeyCode = {
     keyCode >= KeyCode.F1 && keyCode <= KeyCode.F12) {
       return false;
     }
+
     // The following keys are quite harmless, even in combination with
     // CTRL, ALT or SHIFT.
     switch (keyCode) {
@@ -485,6 +512,7 @@ var KeyCode = {
     if (keyCode >= KeyCode.A && keyCode <= KeyCode.Z) {
       return true;
     }
+
     // Safari sends zero key code for non-latin characters.
     if (window.navigator.userAgent.indexOf('WebKit') !== -1 && keyCode === 0) {
       return true;

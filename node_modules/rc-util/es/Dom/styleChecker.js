@@ -1,4 +1,4 @@
-import canUseDom from './canUseDom';
+import canUseDom from "./canUseDom";
 var isStyleNameSupport = function isStyleNameSupport(styleName) {
   if (canUseDom() && window.document.documentElement) {
     var styleNameList = Array.isArray(styleName) ? styleName : [styleName];

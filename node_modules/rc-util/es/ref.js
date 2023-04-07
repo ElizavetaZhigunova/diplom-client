@@ -1,6 +1,8 @@
 import _typeof from "@babel/runtime/helpers/esm/typeof";
+/* eslint-disable no-param-reassign */
+
 import { isMemo } from 'react-is';
-import useMemo from './hooks/useMemo';
+import useMemo from "./hooks/useMemo";
 export function fillRef(ref, node) {
   if (typeof ref === 'function') {
     ref(node);
@@ -8,6 +10,7 @@ export function fillRef(ref, node) {
     ref.current = node;
   }
 }
+
 /**
  * Merge refs into one ref function to support ref passing.
  */
@@ -42,12 +45,14 @@ export function useComposeRef() {
 export function supportRef(nodeOrComponent) {
   var _type$prototype, _nodeOrComponent$prot;
   var type = isMemo(nodeOrComponent) ? nodeOrComponent.type.type : nodeOrComponent.type;
+
   // Function component node
-  if (typeof type === 'function' && !((_type$prototype = type.prototype) === null || _type$prototype === void 0 ? void 0 : _type$prototype.render)) {
+  if (typeof type === 'function' && !((_type$prototype = type.prototype) !== null && _type$prototype !== void 0 && _type$prototype.render)) {
     return false;
   }
+
   // Class component
-  if (typeof nodeOrComponent === 'function' && !((_nodeOrComponent$prot = nodeOrComponent.prototype) === null || _nodeOrComponent$prot === void 0 ? void 0 : _nodeOrComponent$prot.render)) {
+  if (typeof nodeOrComponent === 'function' && !((_nodeOrComponent$prot = nodeOrComponent.prototype) !== null && _nodeOrComponent$prot !== void 0 && _nodeOrComponent$prot.render)) {
     return false;
   }
   return true;

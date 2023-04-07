@@ -14,10 +14,12 @@ var Portal = /*#__PURE__*/(0, _react.forwardRef)(function (props, ref) {
     children = props.children;
   var parentRef = (0, _react.useRef)();
   var containerRef = (0, _react.useRef)();
+
   // Ref return nothing, only for wrapper check exist
   (0, _react.useImperativeHandle)(ref, function () {
     return {};
   });
+
   // Create container in client side with sync to avoid useEffect not get ref
   var initRef = (0, _react.useRef)(false);
   if (!initRef.current && (0, _canUseDom.default)()) {
@@ -25,6 +27,7 @@ var Portal = /*#__PURE__*/(0, _react.forwardRef)(function (props, ref) {
     parentRef.current = containerRef.current.parentNode;
     initRef.current = true;
   }
+
   // [Legacy] Used by `rc-trigger`
   (0, _react.useEffect)(function () {
     didUpdate === null || didUpdate === void 0 ? void 0 : didUpdate(props);

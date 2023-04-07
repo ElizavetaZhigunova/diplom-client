@@ -11,6 +11,8 @@ exports.useComposeRef = useComposeRef;
 var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
 var _reactIs = require("react-is");
 var _useMemo = _interopRequireDefault(require("./hooks/useMemo"));
+/* eslint-disable no-param-reassign */
+
 function fillRef(ref, node) {
   if (typeof ref === 'function') {
     ref(node);
@@ -18,6 +20,7 @@ function fillRef(ref, node) {
     ref.current = node;
   }
 }
+
 /**
  * Merge refs into one ref function to support ref passing.
  */
@@ -52,12 +55,14 @@ function useComposeRef() {
 function supportRef(nodeOrComponent) {
   var _type$prototype, _nodeOrComponent$prot;
   var type = (0, _reactIs.isMemo)(nodeOrComponent) ? nodeOrComponent.type.type : nodeOrComponent.type;
+
   // Function component node
-  if (typeof type === 'function' && !((_type$prototype = type.prototype) === null || _type$prototype === void 0 ? void 0 : _type$prototype.render)) {
+  if (typeof type === 'function' && !((_type$prototype = type.prototype) !== null && _type$prototype !== void 0 && _type$prototype.render)) {
     return false;
   }
+
   // Class component
-  if (typeof nodeOrComponent === 'function' && !((_nodeOrComponent$prot = nodeOrComponent.prototype) === null || _nodeOrComponent$prot === void 0 ? void 0 : _nodeOrComponent$prot.render)) {
+  if (typeof nodeOrComponent === 'function' && !((_nodeOrComponent$prot = nodeOrComponent.prototype) !== null && _nodeOrComponent$prot !== void 0 && _nodeOrComponent$prot.render)) {
     return false;
   }
   return true;

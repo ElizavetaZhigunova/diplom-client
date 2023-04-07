@@ -7,8 +7,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 var _createSuper2 = _interopRequireDefault(require("@babel/runtime/helpers/createSuper"));
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 var _react = _interopRequireDefault(require("react"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 /**
@@ -25,14 +27,14 @@ var ContainerRender = /*#__PURE__*/function (_React$Component) {
       args[_key] = arguments[_key];
     }
     _this = _super.call.apply(_super, [this].concat(args));
-    _this.removeContainer = function () {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "removeContainer", function () {
       if (_this.container) {
         _reactDom.default.unmountComponentAtNode(_this.container);
         _this.container.parentNode.removeChild(_this.container);
         _this.container = null;
       }
-    };
-    _this.renderComponent = function (props, ready) {
+    });
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "renderComponent", function (props, ready) {
       var _this$props = _this.props,
         visible = _this$props.visible,
         getComponent = _this$props.getComponent,
@@ -49,7 +51,7 @@ var ContainerRender = /*#__PURE__*/function (_React$Component) {
           }
         });
       }
-    };
+    });
     return _this;
   }
   (0, _createClass2.default)(ContainerRender, [{
@@ -85,8 +87,8 @@ var ContainerRender = /*#__PURE__*/function (_React$Component) {
   return ContainerRender;
 }(_react.default.Component);
 exports.default = ContainerRender;
-ContainerRender.defaultProps = {
+(0, _defineProperty2.default)(ContainerRender, "defaultProps", {
   autoMount: true,
   autoDestroy: true,
   forceRender: false
-};
+});

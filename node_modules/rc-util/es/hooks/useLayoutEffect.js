@@ -1,5 +1,6 @@
 import * as React from 'react';
-import canUseDom from '../Dom/canUseDom';
+import canUseDom from "../Dom/canUseDom";
+
 /**
  * Wrap `React.useLayoutEffect` which will not throw warning message in test env
  */
@@ -12,6 +13,7 @@ export var useLayoutUpdateEffect = function useLayoutUpdateEffect(callback, deps
       return callback();
     }
   }, deps);
+
   // We tell react that first mount has passed
   useLayoutEffect(function () {
     firstMountRef.current = false;

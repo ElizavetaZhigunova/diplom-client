@@ -1,24 +1,22 @@
 import React from 'react';
-import CheckBox from '../../../checkbox/CheckBox';
-import Inputt from '../../../input-new-add/Inputt';
-import "../third-tab/third.css"
+import CheckBox from '../../checkbox/CheckBox';
+import Inputt from '../../input-new-add/Inputt';
+import "../style.css"
 
 
 
-const ThirdTab = () => {
-let a = document.getElementById("inp-body-third one"),
-            b = document.getElementById("inp-body-third two")
+const ThirdTab = ({data, setData}) => {
+let a = document.getElementById("inp-body-third-one"),
+    b = document.getElementById("inp-body-third-two")
+   
     const onCheck = () => {
        let summa = parseInt(a.value) * 7;
         b.value = summa;
     }
 
-    console.log(onCheck)
 
     return (
         <div>
-            <div className="header-body-rent">Шаг 3</div>
-
             <div className="wrapper-rent">
 
                 <div className="left-side">
@@ -28,16 +26,22 @@ let a = document.getElementById("inp-body-third one"),
                     <div className="container-price">
                         <div className="wrapper-inp">
                             <span className='name-inp-ad'>В день</span>
-                            <Inputt id="inp-body-third one" placeholder="В день (₽)" />
+                            <input id="inp-body-third-one" placeholder="В день (₽)" 
+                                onChange={(e) => setData({...data, priceDay: e.target.value})}
+                                value={data.priceDay}/>
                         </div>
 
                         <div className="wrapper-inp">
                             <span className='name-inp-ad'>В неделю</span>
-                            <Inputt id="inp-body-third two" placeholder="В неделю (₽)" />
+                            <input id="inp-body-third-two" placeholder="В неделю (₽)" 
+                                onChange={(e) => setData({...data, priceWeek: e.target.value})}
+                                value={data.priceWeek}/>
                         </div>
                         <div className="wrapper-inp">
                             <span className='name-inp-ad'>В месяц</span>
-                            <Inputt id="inp-body-third three" placeholder="В месяц (₽)" />
+                            <input id="inp-body-third-three" placeholder="В месяц (₽)" 
+                                onChange={(e) => setData({...data, priceMonth: e.target.value})}
+                                value={data.priceMonth}/>
                         </div>
                     </div>
 
@@ -46,10 +50,14 @@ let a = document.getElementById("inp-body-third one"),
                     </div>
 
                     <div className='photo-body-rent'>Выберите город</div>
-                    <Inputt placeholder="Город" />
+                    <input placeholder="Город" 
+                        onChange={(e) => setData({...data, city: e.target.value})}
+                        value={data.city}/>
 
                     <div className='photo-body-rent'>Укажите адрес передачи</div>
-                    <Inputt placeholder="Адрес" />
+                    <input placeholder="Адрес" 
+                        onChange={(e) => setData({...data, address: e.target.value})}
+                        value={data.address}/>
                    
 
                 </div>

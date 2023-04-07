@@ -22,9 +22,11 @@ function focusable(node) {
     node.isContentEditable ||
     // Anchor with href element
     nodeName === 'a' && !!node.getAttribute('href');
+
     // Get tabIndex
     var tabIndexAttr = node.getAttribute('tabindex');
     var tabIndexNum = Number(tabIndexAttr);
+
     // Parse as number if validate
     var tabIndex = null;
     if (tabIndexAttr && !Number.isNaN(tabIndexNum)) {
@@ -32,6 +34,7 @@ function focusable(node) {
     } else if (isFocusableElement && tabIndex === null) {
       tabIndex = 0;
     }
+
     // Block focusable if disabled
     if (isFocusableElement && node.disabled) {
       tabIndex = null;
@@ -51,20 +54,24 @@ function getFocusNodeList(node) {
   return res;
 }
 var lastFocusElement = null;
+
 /** @deprecated Do not use since this may failed when used in async */
 function saveLastFocusNode() {
   lastFocusElement = document.activeElement;
 }
+
 /** @deprecated Do not use since this may failed when used in async */
 function clearLastFocusNode() {
   lastFocusElement = null;
 }
+
 /** @deprecated Do not use since this may failed when used in async */
 function backLastFocusNode() {
   if (lastFocusElement) {
     try {
       // 元素可能已经被移动了
       lastFocusElement.focus();
+
       /* eslint-disable no-empty */
     } catch (e) {
       // empty

@@ -7,19 +7,21 @@ import ModalWindow from '../modal-window/modal-window';
 import {useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../reducers/userReducer';
 import { useEffect } from 'react';
-import { auth } from '../../actions/user';
+import { connect } from "react-redux"
 
 const Navbar = () => {
 
     
 
-    const isAuth = useState(!!localStorage.getItem('token'))
+    const isAuth = useSelector(state => state.user.isAuth)
+
     const dispatch = useDispatch()
 
     useEffect(() => {
+
         if (localStorage.getItem('token')) {
             console.log("IsAuth", isAuth)
-          }
+        }
 
     }, [])
     
@@ -28,7 +30,6 @@ const Navbar = () => {
     const closeModalWindow = () => {
         setModalActive(false)
     }
-
 
     return (
         <div className='navbar'>
@@ -39,7 +40,7 @@ const Navbar = () => {
 
                 {!isAuth && <div className="btn-login" onClick={() => setModalActive(true)} >Войти</div>}
 
-                {isAuth && <div className="btn-login" onClick={() => dispatch(logout())}>Выйти</div>}
+                {isAuth && <div className="btn-login" onClick={() => dispatch(logout())}>User</div>}
 
                 <ModalWindow active={modalActive} setActive={setModalActive} closeModalWindow={closeModalWindow} />
             </div>
@@ -47,4 +48,8 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+const mapStateToProps = ({currentUser}) => {
+    return {currentUser}
+}
+
+export default connect(mapStateToProps)(Navbar);

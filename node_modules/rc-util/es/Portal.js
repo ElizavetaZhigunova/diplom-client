@@ -1,16 +1,18 @@
 import { useRef, useEffect, forwardRef, useImperativeHandle } from 'react';
 import ReactDOM from 'react-dom';
-import canUseDom from './Dom/canUseDom';
+import canUseDom from "./Dom/canUseDom";
 var Portal = /*#__PURE__*/forwardRef(function (props, ref) {
   var didUpdate = props.didUpdate,
     getContainer = props.getContainer,
     children = props.children;
   var parentRef = useRef();
   var containerRef = useRef();
+
   // Ref return nothing, only for wrapper check exist
   useImperativeHandle(ref, function () {
     return {};
   });
+
   // Create container in client side with sync to avoid useEffect not get ref
   var initRef = useRef(false);
   if (!initRef.current && canUseDom()) {
@@ -18,6 +20,7 @@ var Portal = /*#__PURE__*/forwardRef(function (props, ref) {
     parentRef.current = containerRef.current.parentNode;
     initRef.current = true;
   }
+
   // [Legacy] Used by `rc-trigger`
   useEffect(function () {
     didUpdate === null || didUpdate === void 0 ? void 0 : didUpdate(props);

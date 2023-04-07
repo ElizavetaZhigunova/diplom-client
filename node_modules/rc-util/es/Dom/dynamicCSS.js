@@ -1,5 +1,5 @@
-import canUseDom from './canUseDom';
-import contains from './contains';
+import canUseDom from "./canUseDom";
+import contains from "./contains";
 var APPEND_ORDER = 'data-rc-order';
 var MARK_KEY = "rc-util-key";
 var containerCache = new Map();
@@ -24,6 +24,7 @@ function getOrder(prepend) {
   }
   return prepend ? 'prepend' : 'append';
 }
+
 /**
  * Find style which inject by rc-util
  */
@@ -41,7 +42,7 @@ export function injectCSS(css) {
     prepend = option.prepend;
   var styleNode = document.createElement('style');
   styleNode.setAttribute(APPEND_ORDER, getOrder(prepend));
-  if (csp === null || csp === void 0 ? void 0 : csp.nonce) {
+  if (csp !== null && csp !== void 0 && csp.nonce) {
     styleNode.nonce = csp === null || csp === void 0 ? void 0 : csp.nonce;
   }
   styleNode.innerHTML = css;
@@ -58,6 +59,7 @@ export function injectCSS(css) {
         return styleNode;
       }
     }
+
     // Use `insertBefore` as `prepend`
     container.insertBefore(styleNode, firstChild);
   } else {
@@ -80,11 +82,13 @@ export function removeCSS(key) {
     container.removeChild(existNode);
   }
 }
+
 /**
  * qiankun will inject `appendChild` to insert into other
  */
 function syncRealContainer(container, option) {
   var cachedRealContainer = containerCache.get(container);
+
   // Find real container when not cached or cached container removed
   if (!cachedRealContainer || !contains(document, cachedRealContainer)) {
     var placeholderStyle = injectCSS('', option);
@@ -93,6 +97,7 @@ function syncRealContainer(container, option) {
     container.removeChild(placeholderStyle);
   }
 }
+
 /**
  * manually clear container cache to avoid global cache in unit testes
  */
@@ -102,12 +107,13 @@ export function clearContainerCache() {
 export function updateCSS(css, key) {
   var option = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
   var container = getContainer(option);
+
   // Sync real parent
   syncRealContainer(container, option);
   var existNode = findExistNode(key, option);
   if (existNode) {
     var _option$csp, _option$csp2;
-    if (((_option$csp = option.csp) === null || _option$csp === void 0 ? void 0 : _option$csp.nonce) && existNode.nonce !== ((_option$csp2 = option.csp) === null || _option$csp2 === void 0 ? void 0 : _option$csp2.nonce)) {
+    if ((_option$csp = option.csp) !== null && _option$csp !== void 0 && _option$csp.nonce && existNode.nonce !== ((_option$csp2 = option.csp) === null || _option$csp2 === void 0 ? void 0 : _option$csp2.nonce)) {
       var _option$csp3;
       existNode.nonce = (_option$csp3 = option.csp) === null || _option$csp3 === void 0 ? void 0 : _option$csp3.nonce;
     }

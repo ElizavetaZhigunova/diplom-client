@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+
 var cached;
 export default function getScrollBarSize(fresh) {
   if (typeof document === 'undefined') {

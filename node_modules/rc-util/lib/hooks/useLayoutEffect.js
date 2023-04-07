@@ -21,6 +21,7 @@ var useLayoutUpdateEffect = function useLayoutUpdateEffect(callback, deps) {
       return callback();
     }
   }, deps);
+
   // We tell react that first mount has passed
   useLayoutEffect(function () {
     firstMountRef.current = false;

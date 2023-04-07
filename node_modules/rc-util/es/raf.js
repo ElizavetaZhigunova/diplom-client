@@ -25,6 +25,7 @@ var wrapperRaf = function wrapperRaf(callback) {
     if (leftTimes === 0) {
       // Clean up
       cleanup(id);
+
       // Trigger
       callback();
     } else {
@@ -32,6 +33,7 @@ var wrapperRaf = function wrapperRaf(callback) {
       var realId = raf(function () {
         callRef(leftTimes - 1);
       });
+
       // Bind real raf id
       rafIds.set(id, realId);
     }

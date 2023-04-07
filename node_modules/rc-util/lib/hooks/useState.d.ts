@@ -1,5 +1,5 @@
-type Updater<T> = T | ((prevValue: T) => T);
-export type SetState<T> = (nextValue: Updater<T>, 
+declare type Updater<T> = T | ((prevValue: T) => T);
+export declare type SetState<T> = (nextValue: Updater<T>, 
 /**
  * Will not update state when destroyed.
  * Developer should make sure this is safe to ignore.

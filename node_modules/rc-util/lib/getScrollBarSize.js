@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = getScrollBarSize;
 exports.getTargetScrollBarSize = getTargetScrollBarSize;
 /* eslint-disable no-param-reassign */
+
 var cached;
 function getScrollBarSize(fresh) {
   if (typeof document === 'undefined') {

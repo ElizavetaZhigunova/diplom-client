@@ -1,6 +1,6 @@
-export type ContainerType = Element | ShadowRoot;
-export type Prepend = boolean | 'queue';
-export type AppendType = 'prependQueue' | 'append' | 'prepend';
+export declare type ContainerType = Element | ShadowRoot;
+export declare type Prepend = boolean | 'queue';
+export declare type AppendType = 'prependQueue' | 'append' | 'prepend';
 interface Options {
     attachTo?: ContainerType;
     csp?: {

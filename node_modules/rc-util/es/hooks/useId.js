@@ -7,6 +7,7 @@ function getUseId() {
   return fullClone.useId;
 }
 var uuid = 0;
+
 /** @private Note only worked in develop env. Not work in production. */
 export function resetUuid() {
   if (process.env.NODE_ENV !== 'production') {
@@ -28,14 +29,17 @@ export default function useId(id) {
       setInnerId("rc_unique_".concat(nextId));
     }
   }, []);
+
   // Developer passed id is single source of truth
   if (id) {
     return id;
   }
+
   // Test env always return mock id
   if (process.env.NODE_ENV === 'test') {
     return 'test-id';
   }
+
   // Return react native id or inner id
   return reactNativeId || innerId;
 }

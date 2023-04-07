@@ -1,7 +1,7 @@
 import _objectSpread from "@babel/runtime/helpers/esm/objectSpread2";
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import _toArray from "@babel/runtime/helpers/esm/toArray";
-import get from './get';
+import get from "./get";
 function internalSet(entity, paths, value, removeIfUndefined) {
   if (!paths.length) {
     return value;
@@ -17,6 +17,7 @@ function internalSet(entity, paths, value, removeIfUndefined) {
   } else {
     clone = _objectSpread({}, entity);
   }
+
   // Delete prop if `removeIfUndefined` and value is undefined
   if (removeIfUndefined && value === undefined && restPath.length === 1) {
     delete clone[path][restPath[0]];

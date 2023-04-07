@@ -1,4 +1,4 @@
-import canUseDOM from './canUseDom';
+import canUseDOM from "./canUseDom";
 var animationEndEventNames = {
   WebkitAnimation: 'webkitAnimationEnd',
   OAnimation: 'oAnimationEnd',

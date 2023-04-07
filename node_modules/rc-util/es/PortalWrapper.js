@@ -1,22 +1,26 @@
 import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
 import _createClass from "@babel/runtime/helpers/esm/createClass";
+import _assertThisInitialized from "@babel/runtime/helpers/esm/assertThisInitialized";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import _createSuper from "@babel/runtime/helpers/esm/createSuper";
+import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import _typeof from "@babel/runtime/helpers/esm/typeof";
 /* eslint-disable no-underscore-dangle,react/require-default-props */
 import * as React from 'react';
-import raf from './raf';
-import Portal from './Portal';
-import canUseDom from './Dom/canUseDom';
-import switchScrollingEffect from './switchScrollingEffect';
-import setStyle from './setStyle';
-import ScrollLocker from './Dom/scrollLocker';
+import raf from "./raf";
+import Portal from "./Portal";
+import canUseDom from "./Dom/canUseDom";
+import switchScrollingEffect from "./switchScrollingEffect";
+import setStyle from "./setStyle";
+import ScrollLocker from "./Dom/scrollLocker";
 var openCount = 0;
 var supportDom = canUseDom();
+
 /** @private Test usage only */
 export function getOpenCount() {
   return process.env.NODE_ENV === 'test' ? openCount : 0;
 }
+
 // https://github.com/ant-design/ant-design/issues/19340
 // https://github.com/ant-design/ant-design/issues/19332
 var cacheOverflow = {};
@@ -44,12 +48,12 @@ var PortalWrapper = /*#__PURE__*/function (_React$Component) {
     var _this;
     _classCallCheck(this, PortalWrapper);
     _this = _super.call(this, props);
-    _this.container = void 0;
-    _this.componentRef = /*#__PURE__*/React.createRef();
-    _this.rafId = void 0;
-    _this.scrollLocker = void 0;
-    _this.renderComponent = void 0;
-    _this.updateScrollLocker = function (prevProps) {
+    _defineProperty(_assertThisInitialized(_this), "container", void 0);
+    _defineProperty(_assertThisInitialized(_this), "componentRef", /*#__PURE__*/React.createRef());
+    _defineProperty(_assertThisInitialized(_this), "rafId", void 0);
+    _defineProperty(_assertThisInitialized(_this), "scrollLocker", void 0);
+    _defineProperty(_assertThisInitialized(_this), "renderComponent", void 0);
+    _defineProperty(_assertThisInitialized(_this), "updateScrollLocker", function (prevProps) {
       var _ref = prevProps || {},
         prevVisible = _ref.visible;
       var _this$props = _this.props,
@@ -60,14 +64,15 @@ var PortalWrapper = /*#__PURE__*/function (_React$Component) {
           container: getParent(getContainer)
         });
       }
-    };
-    _this.updateOpenCount = function (prevProps) {
+    });
+    _defineProperty(_assertThisInitialized(_this), "updateOpenCount", function (prevProps) {
       var _ref2 = prevProps || {},
         prevVisible = _ref2.visible,
         prevGetContainer = _ref2.getContainer;
       var _this$props2 = _this.props,
         visible = _this$props2.visible,
         getContainer = _this$props2.getContainer;
+
       // Update count
       if (visible !== prevVisible && supportDom && getParent(getContainer) === document.body) {
         if (visible && !prevVisible) {
@@ -76,13 +81,14 @@ var PortalWrapper = /*#__PURE__*/function (_React$Component) {
           openCount -= 1;
         }
       }
+
       // Clean up container if needed
       var getContainerIsFunc = typeof getContainer === 'function' && typeof prevGetContainer === 'function';
       if (getContainerIsFunc ? getContainer.toString() !== prevGetContainer.toString() : getContainer !== prevGetContainer) {
         _this.removeCurrentContainer();
       }
-    };
-    _this.attachToParent = function () {
+    });
+    _defineProperty(_assertThisInitialized(_this), "attachToParent", function () {
       var force = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
       if (force || _this.container && !_this.container.parentNode) {
         var parent = getParent(_this.props.getContainer);
@@ -93,8 +99,8 @@ var PortalWrapper = /*#__PURE__*/function (_React$Component) {
         return false;
       }
       return true;
-    };
-    _this.getContainer = function () {
+    });
+    _defineProperty(_assertThisInitialized(_this), "getContainer", function () {
       if (!supportDom) {
         return null;
       }
@@ -104,20 +110,20 @@ var PortalWrapper = /*#__PURE__*/function (_React$Component) {
       }
       _this.setWrapperClassName();
       return _this.container;
-    };
-    _this.setWrapperClassName = function () {
+    });
+    _defineProperty(_assertThisInitialized(_this), "setWrapperClassName", function () {
       var wrapperClassName = _this.props.wrapperClassName;
       if (_this.container && wrapperClassName && wrapperClassName !== _this.container.className) {
         _this.container.className = wrapperClassName;
       }
-    };
-    _this.removeCurrentContainer = function () {
+    });
+    _defineProperty(_assertThisInitialized(_this), "removeCurrentContainer", function () {
       var _this$container, _this$container$paren;
       // Portal will remove from `parentNode`.
       // Let's handle this again to avoid refactor issue.
       (_this$container = _this.container) === null || _this$container === void 0 ? void 0 : (_this$container$paren = _this$container.parentNode) === null || _this$container$paren === void 0 ? void 0 : _this$container$paren.removeChild(_this.container);
-    };
-    _this.switchScrollingEffect = function () {
+    });
+    _defineProperty(_assertThisInitialized(_this), "switchScrollingEffect", function () {
       if (openCount === 1 && !Object.keys(cacheOverflow).length) {
         switchScrollingEffect();
         // Must be set after switchScrollingEffect
@@ -131,7 +137,7 @@ var PortalWrapper = /*#__PURE__*/function (_React$Component) {
         cacheOverflow = {};
         switchScrollingEffect(true);
       }
-    };
+    });
     _this.scrollLocker = new ScrollLocker({
       container: getParent(props.getContainer)
     });

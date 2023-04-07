@@ -24,6 +24,7 @@ function internalSet(entity, paths, value, removeIfUndefined) {
   } else {
     clone = (0, _objectSpread2.default)({}, entity);
   }
+
   // Delete prop if `removeIfUndefined` and value is undefined
   if (removeIfUndefined && value === undefined && restPath.length === 1) {
     delete clone[path][restPath[0]];

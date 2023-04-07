@@ -1,21 +1,23 @@
 import React from 'react';
-import Inputt from '../../../input-new-add/Inputt';
+import Inputt from '../../input-new-add/Inputt';
+import { NavLink } from 'react-router-dom';
 
-const FirstTab = () => {
+const FirstTab = ({data, setData}) => {
     return (
         <div>
-            <div className="header-body-rent">Шаг 1</div>
-
                 <div className="wrapper-rent">
     
                     <div className="left-side">
+                        <NavLink className='A' to='AllAds'>
         
-                        <div className="name-body-rent">Название товара</div>
-                        <Inputt placeholder="Наименование"/>
+                        <div className="name-body-rent">Название товара <br /> </div></NavLink>
+                        <input placeholder="Наименование" 
+                            onChange={(e) => setData({...data, name: e.target.value})}
+                            value={data.name}/>
                         <div className='photo-body-rent'>Добавьте фотографии</div>
                         
                         <div className="input__wrapper">
-                
+                            <input type="file" />
                         </div>
 
                     </div>

@@ -1,7 +1,7 @@
 import type * as React from 'react';
 import type { Root } from 'react-dom/client';
 declare const MARK = "__rc_react_root__";
-type ContainerType = (Element | DocumentFragment) & {
+declare type ContainerType = (Element | DocumentFragment) & {
     [MARK]?: Root;
 };
 /** @private Test usage. Not work in prod */

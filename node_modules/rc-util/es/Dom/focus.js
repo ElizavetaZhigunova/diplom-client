@@ -1,5 +1,5 @@
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
-import isVisible from './isVisible';
+import isVisible from "./isVisible";
 function focusable(node) {
   var includePositive = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
   if (isVisible(node)) {
@@ -11,9 +11,11 @@ function focusable(node) {
     node.isContentEditable ||
     // Anchor with href element
     nodeName === 'a' && !!node.getAttribute('href');
+
     // Get tabIndex
     var tabIndexAttr = node.getAttribute('tabindex');
     var tabIndexNum = Number(tabIndexAttr);
+
     // Parse as number if validate
     var tabIndex = null;
     if (tabIndexAttr && !Number.isNaN(tabIndexNum)) {
@@ -21,6 +23,7 @@ function focusable(node) {
     } else if (isFocusableElement && tabIndex === null) {
       tabIndex = 0;
     }
+
     // Block focusable if disabled
     if (isFocusableElement && node.disabled) {
       tabIndex = null;
@@ -40,20 +43,24 @@ export function getFocusNodeList(node) {
   return res;
 }
 var lastFocusElement = null;
+
 /** @deprecated Do not use since this may failed when used in async */
 export function saveLastFocusNode() {
   lastFocusElement = document.activeElement;
 }
+
 /** @deprecated Do not use since this may failed when used in async */
 export function clearLastFocusNode() {
   lastFocusElement = null;
 }
+
 /** @deprecated Do not use since this may failed when used in async */
 export function backLastFocusNode() {
   if (lastFocusElement) {
     try {
       // 元素可能已经被移动了
       lastFocusElement.focus();
+
       /* eslint-disable no-empty */
     } catch (e) {
       // empty

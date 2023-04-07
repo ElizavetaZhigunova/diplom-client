@@ -13,6 +13,7 @@ var _useState5 = _interopRequireDefault(require("./useState"));
 function hasValue(value) {
   return value !== undefined;
 }
+
 /**
  * Similar to `useState` but will use props value if provided.
  * Note that internal use rc-util `useState` hook.
@@ -23,6 +24,7 @@ function useMergedState(defaultStateValue, option) {
     value = _ref.value,
     onChange = _ref.onChange,
     postState = _ref.postState;
+
   // ======================= Init =======================
   var _useState = (0, _useState5.default)(function () {
       if (hasValue(value)) {
@@ -38,6 +40,7 @@ function useMergedState(defaultStateValue, option) {
     setInnerValue = _useState2[1];
   var mergedValue = value !== undefined ? value : innerValue;
   var postMergedValue = postState ? postState(mergedValue) : mergedValue;
+
   // ====================== Change ======================
   var onChangeFn = (0, _useEvent.default)(onChange);
   var _useState3 = (0, _useState5.default)([mergedValue]),
@@ -50,12 +53,14 @@ function useMergedState(defaultStateValue, option) {
       onChangeFn(innerValue, prev);
     }
   }, [prevValue]);
+
   // Sync value back to `undefined` when it from control to un-control
   (0, _useLayoutEffect.useLayoutUpdateEffect)(function () {
     if (!hasValue(value)) {
       setInnerValue(value);
     }
   }, [value]);
+
   // ====================== Update ======================
   var triggerChange = (0, _useEvent.default)(function (updater, ignoreDestroy) {
     setInnerValue(updater, ignoreDestroy);
