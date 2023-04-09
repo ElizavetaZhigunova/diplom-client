@@ -12,8 +12,8 @@ export const AllAds = () => {
 
   const { ads, category } = useSelector(state => state.ads)
 
-  const isAdsLoading = ads.status === 'loading'
-  const isCategoryLoading = category.status === 'loading'
+  // const isAdsLoading = ads.status === 'loading'
+  // const isCategoryLoading = category.status === 'loading'
 
   useEffect(() => {
     dispatch(fetchAds())
@@ -34,17 +34,11 @@ export const AllAds = () => {
         </div> 
 
         <div className="category">
-          <div className="category-div">
-            <span>Платья</span>
-          </div>
-
-          <div className="category-div">
-            <span>Костюмы</span>
-          </div>
-
-          <div className="category-div">
-            <span>Туфли</span>
-          </div>
+          {(category.items).map((obj) => (
+            <div className="category-div">
+              <span>{obj}</span>
+            </div>
+          ))}
         </div>
 
         
@@ -55,15 +49,10 @@ export const AllAds = () => {
               (
                 
               <Ad
-
-              _id={obj._id}
-                    user={obj.user}
-                    name={obj.name}
-                    category={obj.category}
-                    priceDay={obj.priceDay}
-                    viewsCount={obj.viewsCount}
-                  createdAt={obj.createdAt}
-                  
+                _id={obj._id}
+                name={obj.name}
+                priceDay={obj.priceDay}
+                viewsCount={obj.viewsCount}
               />
             ), )}
             

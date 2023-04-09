@@ -7,10 +7,9 @@ export const Ad = (
   _id,
   user,
   name,
-  category,
   priceDay,
   viewsCount,
-createdAt}
+ }
   ) =>  {
 
   // const onSelect = () => {
@@ -21,11 +20,9 @@ createdAt}
         <div className='add-container'>
           <img className='img-ad' src={Photo} alt='photo' />
            <p className='title-ad'>{name} </p>
-           <span>{category}</span>
           <p className='price-ad'>{priceDay}  ₽/день</p>
-          <span>{viewsCount}</span>
+          <span className='title-ad'>Просмотров: {viewsCount}</span>
           <span className="username-second">{user}</span>
-          <span>Товар id: {_id} размещен {createdAt}</span>
         </div>
       </div>
       </Link>

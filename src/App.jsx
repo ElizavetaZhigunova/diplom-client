@@ -6,6 +6,7 @@ import Home from './components/Pages/Home';
 import AddNew from "./components/AddNewad/AddNew";
 import { AllAds } from './components/Pages/AllAds';
 import { FullAd } from './components/Pages/FullAd';
+import FourtTab from './components/AddNewad/tabs-add/FourtTab';
 
 
 
@@ -22,6 +23,7 @@ function App() {
               <Route path='AddNew' element={ <AddNew /> } />
               <Route path='AddNew/AllAds' element={<AllAds />} />
               <Route path='addNew/:id' element={<FullAd />} />
+              <Route path='uploadAdd' element={<FourtTab />} />
             </Routes>
         </div>
       </div>

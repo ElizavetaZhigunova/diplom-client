@@ -2,15 +2,18 @@ import React, { useEffect, useState } from 'react'
 import axios from '../../reducers/axios'
 import { useParams } from "react-router-dom";
 import './style.css'
-import Photo from '../img/addNew/closes1.png'
+// import Photo from '../img/addNew/closes1.png'
 import Caret from '../img/addNew/chevron-left.svg'
-import Person from '../img/addNew/person.svg'
+import {  useSelector } from 'react-redux'
+// import Person from '../img/addNew/person.svg'
 import Footer from '../footer/footer'
 import { useNavigate } from 'react-router-dom'
 import { Ad } from '../AddNewad/Ad'
 
 export const FullAd = () => {
-
+    const { ads, category } = useSelector(state => state.ads)
+    console.log(ads)
+    console.log(category)
     const [data, setData] = useState()
 
     const navigate = useNavigate()
@@ -19,10 +22,10 @@ export const FullAd = () => {
 
     useEffect(() => {
         axios
-          .get(`/addNew/${id}`)
+          .get(`/AddNew/${id}`)
           .then((res) => {
             setData(res.data);
-           
+            alert("success")
           })
           .catch((err) => {
             console.warn(err);
@@ -42,13 +45,11 @@ export const FullAd = () => {
                     <span className="second-menu">lll</span>
                 </div>
                 <Ad
-                //     id={data._id}
-                //     user={data.user}
-                //     name={data.name}
-                //     category={data.category}
-                //     priceDay={data.priceDay}
-                //     viewsCount={data.viewsCount}
-                //   createdAt={data.createdAt}
+                    id={data._id}
+                    user={data.user}
+                    name={data.name}
+                    priceDay={data.priceDay}
+                    viewsCount={data.viewsCount}
 
                 
                 />

@@ -9,13 +9,16 @@ import { logout } from '../../reducers/userReducer';
 import { useEffect } from 'react';
 import { connect } from "react-redux"
 
+
+
+
 const Navbar = () => {
 
     
 
     const isAuth = useSelector(state => state.user.isAuth)
-
     const dispatch = useDispatch()
+    
 
     useEffect(() => {
 
@@ -40,7 +43,7 @@ const Navbar = () => {
 
                 {!isAuth && <div className="btn-login" onClick={() => setModalActive(true)} >Войти</div>}
 
-                {isAuth && <div className="btn-login" onClick={() => dispatch(logout())}>User</div>}
+                {isAuth && <div className="btn-login" onClick={() => dispatch(logout())}>gf</div>}
 
                 <ModalWindow active={modalActive} setActive={setModalActive} closeModalWindow={closeModalWindow} />
             </div>
@@ -51,5 +54,4 @@ const Navbar = () => {
 const mapStateToProps = ({currentUser}) => {
     return {currentUser}
 }
-
 export default connect(mapStateToProps)(Navbar);

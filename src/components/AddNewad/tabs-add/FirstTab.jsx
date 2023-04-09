@@ -1,5 +1,5 @@
 import React from 'react';
-import Inputt from '../../input-new-add/Inputt';
+// import Inputt from '../../input-new-add/Inputt';
 import { NavLink } from 'react-router-dom';
 
 const FirstTab = ({data, setData}) => {
@@ -17,7 +17,8 @@ const FirstTab = ({data, setData}) => {
                         <div className='photo-body-rent'>Добавьте фотографии</div>
                         
                         <div className="input__wrapper">
-                            <input type="file" />
+                            <input type="text" onChange={(e) => setData({...data, photo: e.target.value})}
+                            value={data.photo}/>
                         </div>
 
                     </div>

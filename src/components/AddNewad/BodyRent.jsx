@@ -16,6 +16,7 @@ import {addNewAd} from '../../actions/ad'
 const BodyRent = () => {
     const [page, setPage] = useState(0)
     const titles = ["Шаг 1", "Шаг 2", "Шаг 3", "Шаг 4"]
+    const navigate = useNavigate()
 
 
     const [data, setData] = useState({
@@ -109,7 +110,7 @@ const BodyRent = () => {
                             onClick={(e) => {
                                 if (page === 2) {
                                     addNewAd(data)
-                                    return <FourtTab/>
+                                    navigate('/uploadAdd')
                                     
                                 } else {
                                     setPage((currPage) => currPage + 1)
