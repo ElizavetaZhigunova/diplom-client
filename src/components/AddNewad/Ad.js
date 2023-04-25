@@ -16,7 +16,7 @@ export const Ad = (
   //   return redirect("/login");
   // }
     return (
-      <Link to={`/addNew/${_id}`} className='A'><div className='add-wrapper'>
+      <Link to={`/AllAds/${_id}`} className='A'><div className='add-wrapper'>
         <div className='add-container'>
           <img className='img-ad' src={Photo} alt='photo' />
            <p className='title-ad'>{name} </p>

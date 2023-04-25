@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const addNewAd = async(name, photo, category, price, priceDay, priceWeek, priceMonth, city, address) => {
+export const createAd = async({name, photo, category, price, priceDay, priceWeek, priceMonth, city, address}) => {
     try {
         const response = await axios.post(`http://localhost:5000/AddNew`, {
         name,
@@ -18,3 +18,6 @@ export const addNewAd = async(name, photo, category, price, priceDay, priceWeek,
         alert("Error catch")
     }
 }
+
+
+

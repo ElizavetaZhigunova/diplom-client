@@ -7,7 +7,7 @@ import SecondTab from './tabs-add/SecondTab'
 import ThirdTab from './tabs-add/ThirdTab'
 import FourtTab from './tabs-add/FourtTab'
 import HeaderRent from './header/HeaderRent';
-import {addNewAd} from '../../actions/ad'
+import { createAd } from '../../actions/ad'
 
 
 
@@ -109,7 +109,7 @@ const BodyRent = () => {
                         <button 
                             onClick={(e) => {
                                 if (page === 2) {
-                                    addNewAd(data)
+                                    createAd(data)
                                     navigate('/uploadAdd')
                                     
                                 } else {
