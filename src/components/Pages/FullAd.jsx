@@ -17,6 +17,8 @@ export const FullAd = () => {
   const [data, setData] = useState();
   const [loaded, setLoaded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+   
+  const user = useSelector(state => state.user.currentUser)
 
   const navigate = useNavigate();
 
@@ -65,7 +67,7 @@ export const FullAd = () => {
                     <div className="photo-user">
                       <img src={Person} alt="" />
                     </div>
-                    <span className="username">{}</span>
+                    <span className="username">{user.name}</span>
                   </div>
 
                   <div className="price-blok">{data.priceDay} ₽/день</div>

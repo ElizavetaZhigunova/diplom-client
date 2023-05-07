@@ -24,7 +24,6 @@ const Navbar = () => {
     useEffect(() => {
 
         if (localStorage.getItem('token')) {
-            console.log("IsAuth", isAuth)
             dispatch(auth())
         }
 

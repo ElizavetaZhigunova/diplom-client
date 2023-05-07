@@ -373,3 +373,30 @@
   
   color: #F36F56;
 }
+
+
+
+
+.upload {
+  width: 200px;
+  height: 35px;
+  display: flex;
+  font-size: 20px;
+  color: #43436D;
+  border: 1px solid #43436D;
+  border-radius: 15px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+/* FOURTH TAB */
+
+.fourth-wrapper{
+  width: 100px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}

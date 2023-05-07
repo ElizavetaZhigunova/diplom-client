@@ -6,7 +6,7 @@ import Home from './components/Pages/Home';
 import AddNew from "./components/AddNewad/AddNew";
 import { AllAds } from './components/Pages/AllAds';
 import { FullAd } from './components/Pages/FullAd';
-import FourtTab from './components/AddNewad/tabs-add/FourtTab';
+import FourtTab from './components/AddNewad/FourtTab';
 import UserProfile from './components/Pages/UserProfile';
 
 
