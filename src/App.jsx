@@ -8,6 +8,7 @@ import { AllAds } from './components/Pages/AllAds';
 import { FullAd } from './components/Pages/FullAd';
 import FourtTab from './components/AddNewad/FourtTab';
 import UserProfile from './components/Pages/UserProfile';
+import UpdateAd from './components/Pages/UpdateAd';
 
 
 
@@ -26,6 +27,7 @@ function App() {
               <Route path='AllAds/:id' element={<FullAd />} />
               <Route path='uploadAdd' element={<FourtTab />} />
               <Route path='profile' element={<UserProfile />} />
+              <Route path='update' element={<UpdateAd />} />
             </Routes>
         </div>
       </div>

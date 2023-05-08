@@ -659,3 +659,72 @@ margin-right: 10px;
     color: #000000;
 margin-bottom: 40px;    
 }
+
+/* UPDATE AD */
+
+.update-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.update-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-update {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family: 'Raleway';
+    font-weight: 500;
+}
+
+.blocks {
+    display: flex;
+}
+
+.photo-block-update {
+    margin-right: 40px;
+}
+
+.photo-upd {
+    width: 381px;
+    height: 228px;
+    background: #666666;
+}
+
+.update {
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.btn-upd {
+    display: flex;
+    margin-top: 10px;
+}
+
+.form-main-update {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.btns-block {
+    display: flex;
+    margin-top: 40px;
+}
+
+.remove {
+    cursor: pointer;
+}
+
+.cancel {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.save {
+    cursor: pointer;
+}
